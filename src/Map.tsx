@@ -42,8 +42,8 @@ const Map = (): JSX.Element => {
       style={styles.map}
       compassEnabled={false}
       attributionEnabled={false}
-      // onRegionWillChange={handleCompassBearing}
-      // onRegionDidChange={handleRegionChange}
+      onRegionWillChange={handleCompassBearing}
+      onRegionDidChange={handleRegionChange}
       logoEnabled={false}>
       <Camera key="camera" />
     </MapboxGL.MapView>
