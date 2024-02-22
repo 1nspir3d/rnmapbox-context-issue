@@ -8,21 +8,21 @@ import Animated, {
 
 export const CompassButton = (): JSX.Element => {
   const mapContext = useContext(MapContext);
-  const heading = useDerivedValue(() => {
-    if (mapContext === null) {
-      return 0;
-    }
-    return mapContext.current.heading.value;
-  });
-  const style = useAnimatedStyle(() => {
-    return {
-      transform: [
-        {
-          rotate: `${360 - heading.value}deg`,
-        },
-      ],
-    };
-  });
+  // const heading = useDerivedValue(() => {
+  //   if (mapContext === null) {
+  //     return 0;
+  //   }
+  //   return mapContext.current.heading.value;
+  // });
+  // const style = useAnimatedStyle(() => {
+  //   return {
+  //     transform: [
+  //       {
+  //         rotate: `${360 - heading.value}deg`,
+  //       },
+  //     ],
+  //   };
+  // });
 
   const handlePress = React.useCallback(() => {
     mapContext?.current.cameraRef.current?.setCamera({
@@ -34,8 +34,8 @@ export const CompassButton = (): JSX.Element => {
 
   return (
     <TouchableOpacity onPress={handlePress}>
-      <Animated.View style={[styles.arrowContainer, style]} />
-      {/* <View style={[styles.arrowContainer]} /> */}
+      {/* <Animated.View style={[styles.arrowContainer, style]} /> */}
+      <View style={[styles.arrowContainer]} />
     </TouchableOpacity>
   );
 };
