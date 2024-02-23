@@ -7,7 +7,7 @@ import {StyleSheet} from 'react-native';
 import {useSetCompassHeading} from './useMap';
 
 MapboxGL.setAccessToken(
-  'pk.eyJ1IjoiZXRoYXFuaXgiLCJhIjoiY2p4ZzRleXB2MDgyOTNubDk3MGo1dWx2aSJ9.Wiapatml0CXOnOkjNHQb9Q',
+  'pk.eyJ1IjoiMW5zcGlyM2QiLCJhIjoiY2xmdWdhbzhsMDJkODNqbXU0ZXduenB4eSJ9.3gjSoGxYCmFckQ9g_JBnaA',
 );
 
 // edit map logging messages
